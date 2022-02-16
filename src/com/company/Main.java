@@ -19,6 +19,7 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        StudentService service = new StudentService();
 
         do {
             menu();
@@ -39,6 +40,7 @@ public class Main {
                     break;
                 case 5:
                     System.out.println("View All Students");
+                    service.viewAllStud();
                     break;
                 case 6:
                     System.out.println("Thank you for using Student Management System!");

@@ -1,15 +1,32 @@
 package com.company;
 
-public class Student {
+public class Student extends Person{
     private int studId;
-    private String studName;
-    private String studLastName;
 
-    public Student(int studId,String studName, String studLastName) {
-        this.studId=studId;
-        this.studName=studName;
-        this.studLastName=studLastName;
-    };
+    public int getStudId() {
+        return studId;
+    }
+
+    public void setStudId(int studId) {
+        this.studId = studId;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", studId=" + studId +
+                '}';
+    }
+
+    public Student(int studId, String name, String lastName) {
+        super();
+        this.studId = studId;
+        this.name= name;
+        this.lastName= lastName;
+
+    }
 
 }
 
